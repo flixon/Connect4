@@ -53,8 +53,12 @@ public class FIR{
             return true;
         }
         System.out.println("Start new game?");
-        if(gameScanner.nextLine().toLowerCase().contains("yes")){
+        String act = gameScanner.nextLine().toLowerCase();
+        if(act.contains("yes")){
             return true;
+        }
+        else if (act.contains("stats")) {
+            return false;
         }
         else{
             return false;

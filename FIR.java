@@ -22,14 +22,22 @@ public class FIR{
             game.print();
 
 
-
+            loop:
             while (game.gameState()) {
                 System.out.println(player1.getName() + ", it´s your turn.");
                 game.newMove(player1, gameScanner.nextInt());
                 game.print();
+                if (!game.gameState()) {
+                    System.out.println("Congratulations to the win, " + player1.getName() + "!!!");
+                    break loop;
+                }
                 System.out.println(player2.getName() + ", it´s your turn.");
                 game.newMove(player2, gameScanner.nextInt());
                 game.print();
+                if (!game.gameState()) {
+                    System.out.println("Congratulations to the win, " + player2.getName() + "!!!");
+                    break loop;
+                }
 
             }
 

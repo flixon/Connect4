@@ -15,6 +15,7 @@ public class Player{
         losses++;
     }
     public void newWin(){
+        //System.out.println("Congratulations to the win, " + name + "!!!");
         wins++;
     }
     public int getWins(){
